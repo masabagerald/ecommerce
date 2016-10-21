@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block site_wrapper %}
+<div id="main">
+<a href="#content" class="skip_link">Skip to main content</a>
+<div id="banner">
+<div class="bannerIEPadder">
+<div class="cart_box">
+[link to cart here]
+</div>
+  House of Leather
+
+    <h6>where quality matters</h6>
+</div>
+</div>
+<div id="navigation">
+<div class="navIEPadder">
+[navigation here]
+
+    {% include "tags/category_list.html" %}
+</div>
+</div>
+<div id="middle">
+<div id="sidebar">
+<div class="sidebarIEPadder">
+[search box here]
+<br />
+{% include 'tags/navigations.html' %}
+</div>
+</div>
+<div id="content">
+<a name=”content”></a>
+<div class="contentIEPadder">
+{% block content %}{% endblock %}
+</div>
+</div>
+</div>
+<div id="footer">
+<div class="footerIEPadder">
+ <p> © 2016 House Of Leather All rights reserved </p>
+</div>
+</div>
+</div>
+{% endblock %}
